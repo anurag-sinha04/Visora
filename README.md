@@ -2,7 +2,7 @@
 **Breaking Language Barriers Through Sign Language, Speech, and Real-Time Accessibility**
 
 🔗 **Live Platform:** https://anurag-sinha04.github.io/Visora/  
-🏆 **Hackathon Winning Project | National-Level Shortlisting Submission**
+🏆 **Hackathon Winning Project**
 
 ---
 
