@@ -214,11 +214,18 @@ function checkVideoExists(path) {
 // ------------------------
 // Get video path for word or letter
 // ------------------------
+const BASE_PATH = window.location.hostname.includes("github.io")
+  ? "/Visora/SignLang.ai/videos/"
+  : "videos/";
+
+
 async function getVideoPath(name) {
   if (!name) return null;
-  const formats = ['.mp4', '.webm'];
+  const formats = ['.webm'];
+  const clean = name.trim().toUpperCase(); // IMPORTANT
+
   for (const ext of formats) {
-    const path = `videos/${name.toLowerCase()}${ext}`;
+    const path = `${BASE_PATH}${clean}${ext}`;
     if (await checkVideoExists(path)) return path;
   }
   return null;
@@ -228,7 +235,8 @@ async function getVideoPath(name) {
 // Prepare video sequence
 // ------------------------
 async function prepareSequence(text) {
-  const words = text.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/);
+const words = text.toUpperCase().replace(/[^\w\s]/g, '').split(/\s+/);
+
   const seq = [];
   for (const word of words) {
     if (!word) continue;
