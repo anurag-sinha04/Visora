@@ -91,15 +91,26 @@ git clone https://github.com/anurag-sinha04/Visora.git
 cd Visora
 
 
-2️⃣ Run Frontend
-# Open index.html directly
-# or
-Right click → Open with Live Server
+
 
 3️⃣ Run Backend (Optional)
 npm install
 npm start
 
 
+## 🖼 Platform Preview
+
+###2️⃣ Run Frontend
+# Open index.html directly
+# or
+Right click → Open with Live Server
+
+## 🖼 Platform Preview
+
+
+###
+3️⃣ Run Backend (Optional)
+npm install
+npm start
 ## 🖼 Platform Preview
 
