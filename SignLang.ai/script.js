@@ -218,39 +218,41 @@ const BASE_PATH = window.location.hostname.includes("github.io")
   ? "/Visora/SignLang.ai/videos/"
   : "videos/";
 
-
-async function getVideoPath(name) {
-  if (!name) return null;
-  const formats = ['.webm'];
-  const clean = name.trim().toUpperCase(); // IMPORTANT
-
-  for (const ext of formats) {
-    const path = `${BASE_PATH}${clean}${ext}`;
-    if (await checkVideoExists(path)) return path;
-  }
-  return null;
+function getVideoPath(name) {
+  return `${BASE_PATH}${name.toUpperCase()}.webm`;
 }
 
-// ------------------------
-// Prepare video sequence
-// ------------------------
 async function prepareSequence(text) {
-const words = text.toUpperCase().replace(/[^\w\s]/g, '').split(/\s+/);
-
+  const words = text.toUpperCase().replace(/[^\w\s]/g, '').split(/\s+/);
   const seq = [];
+
   for (const word of words) {
     if (!word) continue;
-    const path = await getVideoPath(word);
-    if (path) seq.push(path);
-    else {
-      for (const letter of word.toUpperCase()) {
-        const letterPath = await getVideoPath(letter);
-        if (letterPath) seq.push(letterPath);
+
+    const wordPath = getVideoPath(word);
+
+    const exists = await new Promise(resolve => {
+      const v = document.createElement("video");
+      v.src = wordPath;
+      v.onloadeddata = () => resolve(true);
+      v.onerror = () => resolve(false);
+    });
+
+    if (exists) {
+      // Whole word video found
+      seq.push(wordPath);
+    } else {
+      // Fallback to letters
+      for (const letter of word) {
+        seq.push(getVideoPath(letter));
       }
     }
   }
+
   return seq;
 }
+
+
 
 // ------------------------
 // Play video sequence
