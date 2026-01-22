@@ -1,41 +1,105 @@
-# Visora  
-Break the language barrier through sign language and multilingual communication.
+# 🌐 Visora — Inclusive Communication Platform  
+**Breaking Language Barriers Through Sign Language, Speech, and Real-Time Accessibility**
 
-## 🚀 Overview  
-Visora is an assistive communication solution designed to enable inclusive digital interaction for individuals with hearing/speech disabilities or language limitations. It integrates sign language, translation, voice processing, and content summarization into a unified platform.
+🔗 **Live Platform:** https://anurag-sinha04.github.io/Visora/  
+🏆 **Hackathon Winning Project | National-Level Shortlisting Submission**
 
-## 🧩 Modules
-| Module | Description |
-|--------|-------------|
-| **Text → Sign** | Converts written text into sign language animations (GIF/video). |
-| **Sign → Text** | Recognizes sign language from video input and generates text. |
-| **Vernacular Translation** | Real-time speech translation between multiple languages. |
-| **Sign-Based Video Conferencing** | Live video calls with sign support and speech transcription. |
-| **Text Summarizer** | Condenses long content into concise summaries or structured notes. |
+---
 
-## 🔧 Tech Stack
-- **Frontend:** HTML, CSS, JavaScript (Tailwind optional)
-- **Backend:** Node.js (Express.js), Python (if used for ML/NLP)
-- **Realtime:** Socket.IO / WebRTC
-- **Assets:** Sign language GIF/video library
+## ✨ Introduction
 
-## 📦 Installation & Setup....
+**Visora** is a unified assistive communication ecosystem built to empower:
 
+- Deaf and Hard-of-Hearing individuals  
+- Speech-impaired users  
+- Multilingual communities  
+- Inclusive classrooms  
+- Accessible remote collaboration  
+
+It combines **Sign Language Animation, Speech Recognition, Translation, Video Conferencing, and Intelligent Summarization** into a single seamless platform — designed with accessibility at its core.
+
+---
+
+## 🧠 Vision
+
+> “Communication should never be a barrier to opportunity.”
+
+Visora aims to become a **universal accessibility layer** for digital interaction, enabling everyone to communicate naturally regardless of language or hearing ability.
+
+---
+
+## 🧩 Core Modules
+
+### 🖐 1. Text → Sign Language  
+Convert typed or spoken sentences into sign language videos (WebM/GIF based avatar playback).
+
+### 🎥 2. Sign → Text *(Under Development)*  
+AI-powered recognition of sign gestures from uploaded video to generate readable text.
+
+### 🌍 3. Vernacular Translation  
+Real-time speech translation between multiple regional and global languages.
+
+### 📞 4. Sign-Based Video Conferencing  
+Live WebRTC video calls with:  
+- Speech-to-text captions  
+- Sign language overlay  
+- Ultra-low latency (~20ms optimized pipeline)
+
+### 📝 5. Text Summarizer & Smart Notes  
+Summarizes long documents or lectures into concise notes using NLP.
+
+---
+
+## 🚀 Key Highlights (USP)
+
+- ⚡ Ultra-low latency video conferencing (~20ms)  
+- 🧠 AI-assisted translation & summarization  
+- ♿ Accessibility-first UI/UX  
+- 🌐 Browser-based (No installation for end users)  
+- 🔁 Real-time sign animation playback  
+- 🏆 Hackathon award-winning architecture  
+
+---
+
+
+---
+
+## 🏗 Technology Stack
+
+### Frontend
+- HTML5, CSS3, JavaScript  
+- TailwindCSS  
+- Web Speech API  
+- MediaRecorder API  
+
+### Realtime
+- WebRTC  
+- Socket.IO  
+- PeerJS  
+
+### Backend (Optional)
+- Node.js (Express)  
+- Python (NLP / ML)  
+
+---
+
+## 📦 Installation & Local Setup
+
+### 1️⃣ Clone Repository
 ```bash
-# 1. Clone repository
-git clone <repository-url>
-cd visora
+git clone https://github.com/anurag-sinha04/Visora.git
+cd Visora
 
-# 2. Install dependencies
-npm install                     # Node
-pip install -r requirements.txt # Python (if applicable)
 
-# 3. Start backend services
-npm start            # or node server.js / nodemon
-# Start any additional servers per module if required
+2️⃣ Run Frontend
+# Open index.html directly
+# or
+Right click → Open with Live Server
 
-# 4. Resolve port conflicts if needed
-# Example:
-# 5500 – Live Server / HTML interface
-# 3000 – Node backend / signaling
-# 5000 – Python API (optional)
+3️⃣ Run Backend (Optional)
+npm install
+npm start
+
+
+## 🖼 Platform Preview
+
