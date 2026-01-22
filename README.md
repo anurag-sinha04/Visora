@@ -64,6 +64,8 @@ Summarizes long documents or lectures into concise notes using NLP.
 
 ---
 
+---
+
 ## 🏗 Technology Stack
 
 ### Frontend
@@ -89,28 +91,16 @@ Summarizes long documents or lectures into concise notes using NLP.
 ```bash
 git clone https://github.com/anurag-sinha04/Visora.git
 cd Visora
+2️⃣ Run Frontend (Static)
 
+Open directly:
 
-
-
-3️⃣ Run Backend (Optional)
+index.html
+3️⃣ Run Backend (Optional for Realtime & AI)
 npm install
 npm start
 
 
-## 🖼 Platform Preview
-
-###2️⃣ Run Frontend
-# Open index.html directly
-# or
-Right click → Open with Live Server
-
-## 🖼 Platform Preview
 
 
-###
-3️⃣ Run Backend (Optional)
-npm install
-npm start
-## 🖼 Platform Preview
 
