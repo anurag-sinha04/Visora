@@ -6,6 +6,19 @@
 
 ---
 
+## ☁ Deployment Note (Free Infrastructure)
+
+Some modules such as **Vernacular Translation** and **Sign-Based Video Conferencing** are deployed on **Render free-tier servers** due to budget constraints during hackathon prototyping.
+
+Because of this:
+- The first request may take **10–30 seconds** to wake the server.
+- Initial loading delay is expected.
+- After warm-up, performance is real-time and stable.
+
+This demonstrates a **production-grade system built under minimal-cost constraints**, suitable for accessibility research and hackathon evaluation.
+
+---
+
 ## ✨ Introduction
 
 **Visora** is a unified assistive communication ecosystem built to empower:
@@ -16,7 +29,7 @@
 - Inclusive classrooms  
 - Accessible remote collaboration  
 
-It combines **Sign Language Animation, Speech Recognition, Translation, Video Conferencing, and Intelligent Summarization** into a single seamless platform — designed with accessibility at its core.
+It integrates **Sign Language Animation, Speech Recognition, Translation, Video Conferencing, and Intelligent Summarization** into one seamless platform.
 
 ---
 
@@ -24,83 +37,67 @@ It combines **Sign Language Animation, Speech Recognition, Translation, Video Co
 
 > “Communication should never be a barrier to opportunity.”
 
-Visora aims to become a **universal accessibility layer** for digital interaction, enabling everyone to communicate naturally regardless of language or hearing ability.
+Visora aims to become a **universal accessibility layer** for digital interaction.
 
 ---
 
 ## 🧩 Core Modules
 
-### 🖐 1. Text → Sign Language  
-Convert typed or spoken sentences into sign language videos (WebM/GIF based avatar playback).
+### 🖐 Text → Sign Language  
+Converts typed or spoken sentences into sign language videos.
 
-### 🎥 2. Sign → Text *(Under Development)*  
-AI-powered recognition of sign gestures from uploaded video to generate readable text.
+### 🎥 Sign → Text *(Under Development)*  
+Recognizes sign gestures from video and generates readable text.
 
-### 🌍 3. Vernacular Translation  
-Real-time speech translation between multiple regional and global languages.
+### 🌍 Vernacular Translation  
+Real-time multilingual speech translation.
 
-### 📞 4. Sign-Based Video Conferencing  
-Live WebRTC video calls with:  
-- Speech-to-text captions  
-- Sign language overlay  
-- Ultra-low latency (~20ms optimized pipeline)
+### 📞 Sign-Based Video Conferencing  
+Live WebRTC video calls with sign overlay and captions.
 
-### 📝 5. Text Summarizer & Smart Notes  
-Summarizes long documents or lectures into concise notes using NLP.
+### 📝 Text Summarizer  
+Converts long content into concise notes.
 
 ---
 
 ## 🚀 Key Highlights (USP)
 
 - ⚡ Ultra-low latency video conferencing (~20ms)  
-- 🧠 AI-assisted translation & summarization  
-- ♿ Accessibility-first UI/UX  
-- 🌐 Browser-based (No installation for end users)  
-- 🔁 Real-time sign animation playback  
-- 🏆 Hackathon award-winning architecture  
-
----
-
-
----
+- ♿ Accessibility-first design  
+- 🌐 Browser-based, no installation  
+- 🔁 Real-time sign animation  
+- 🏆 Hackathon award-winning system  
 
 ---
 
 ## 🏗 Technology Stack
 
-### Frontend
-- HTML5, CSS3, JavaScript  
-- TailwindCSS  
-- Web Speech API  
-- MediaRecorder API  
+**Frontend:**  
+HTML, CSS, JavaScript, TailwindCSS, Web Speech API  
 
-### Realtime
-- WebRTC  
-- Socket.IO  
-- PeerJS  
+**Realtime:**  
+WebRTC, Socket.IO, PeerJS  
 
-### Backend (Optional)
-- Node.js (Express)  
-- Python (NLP / ML)  
+**Backend (Optional):**  
+Node.js (Express), Python (NLP/ML)
 
 ---
 
 ## 📦 Installation & Local Setup
 
-### 1️⃣ Clone Repository
 ```bash
+# 1. Clone repository
 git clone https://github.com/anurag-sinha04/Visora.git
 cd Visora
-2️⃣ Run Frontend (Static)
 
-Open directly:
+# 2. Run Frontend
+# Open index.html directly
+# or use Live Server in VS Code
 
-index.html
-3️⃣ Run Backend (Optional for Realtime & AI)
+# 3. Run Backend (Optional for Realtime & AI)
 npm install
 npm start
 
-
-
-
-
+# 4. (Optional Python Services)
+pip install -r requirements.txt
+python app.py
