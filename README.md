@@ -1,41 +1,103 @@
-# Visora  
-Break the language barrier through sign language and multilingual communication.
+# 🌐 Visora — Inclusive Communication Platform  
+**Breaking Language Barriers Through Sign Language, Speech, and Real-Time Accessibility**
 
-## 🚀 Overview  
-Visora is an assistive communication solution designed to enable inclusive digital interaction for individuals with hearing/speech disabilities or language limitations. It integrates sign language, translation, voice processing, and content summarization into a unified platform.
+🔗 **Live Platform:** https://anurag-sinha04.github.io/Visora/  
+🏆 **Hackathon Winning Project**
 
-## 🧩 Modules
-| Module | Description |
-|--------|-------------|
-| **Text → Sign** | Converts written text into sign language animations (GIF/video). |
-| **Sign → Text** | Recognizes sign language from video input and generates text. |
-| **Vernacular Translation** | Real-time speech translation between multiple languages. |
-| **Sign-Based Video Conferencing** | Live video calls with sign support and speech transcription. |
-| **Text Summarizer** | Condenses long content into concise summaries or structured notes. |
+---
 
-## 🔧 Tech Stack
-- **Frontend:** HTML, CSS, JavaScript (Tailwind optional)
-- **Backend:** Node.js (Express.js), Python (if used for ML/NLP)
-- **Realtime:** Socket.IO / WebRTC
-- **Assets:** Sign language GIF/video library
+## ☁ Deployment Note (Free Infrastructure)
 
-## 📦 Installation & Setup....
+Some modules such as **Vernacular Translation** and **Sign-Based Video Conferencing** are deployed on **Render free-tier servers** due to budget constraints during hackathon prototyping.
+
+Because of this:
+- The first request may take **10–30 seconds** to wake the server.
+- Initial loading delay is expected.
+- After warm-up, performance is real-time and stable.
+
+This demonstrates a **production-grade system built under minimal-cost constraints**, suitable for accessibility research and hackathon evaluation.
+
+---
+
+## ✨ Introduction
+
+**Visora** is a unified assistive communication ecosystem built to empower:
+
+- Deaf and Hard-of-Hearing individuals  
+- Speech-impaired users  
+- Multilingual communities  
+- Inclusive classrooms  
+- Accessible remote collaboration  
+
+It integrates **Sign Language Animation, Speech Recognition, Translation, Video Conferencing, and Intelligent Summarization** into one seamless platform.
+
+---
+
+## 🧠 Vision
+
+> “Communication should never be a barrier to opportunity.”
+
+Visora aims to become a **universal accessibility layer** for digital interaction.
+
+---
+
+## 🧩 Core Modules
+
+### 🖐 Text → Sign Language  
+Converts typed or spoken sentences into sign language videos.
+
+### 🎥 Sign → Text *(Under Development)*  
+Recognizes sign gestures from video and generates readable text.
+
+### 🌍 Vernacular Translation  
+Real-time multilingual speech translation.
+
+### 📞 Sign-Based Video Conferencing  
+Live WebRTC video calls with sign overlay and captions.
+
+### 📝 Text Summarizer  
+Converts long content into concise notes.
+
+---
+
+## 🚀 Key Highlights (USP)
+
+- ⚡ Ultra-low latency video conferencing (~20ms)  
+- ♿ Accessibility-first design  
+- 🌐 Browser-based, no installation  
+- 🔁 Real-time sign animation  
+- 🏆 Hackathon award-winning system  
+
+---
+
+## 🏗 Technology Stack
+
+**Frontend:**  
+HTML, CSS, JavaScript, TailwindCSS, Web Speech API  
+
+**Realtime:**  
+WebRTC, Socket.IO, PeerJS  
+
+**Backend (Optional):**  
+Node.js (Express), Python (NLP/ML)
+
+---
+
+## 📦 Installation & Local Setup
 
 ```bash
 # 1. Clone repository
-git clone <repository-url>
-cd visora
+git clone https://github.com/anurag-sinha04/Visora.git
+cd Visora
 
-# 2. Install dependencies
-npm install                     # Node
-pip install -r requirements.txt # Python (if applicable)
+# 2. Run Frontend
+# Open index.html directly
+# or use Live Server in VS Code
 
-# 3. Start backend services
-npm start            # or node server.js / nodemon
-# Start any additional servers per module if required
+# 3. Run Backend (Optional for Realtime & AI)
+npm install
+npm start
 
-# 4. Resolve port conflicts if needed
-# Example:
-# 5500 – Live Server / HTML interface
-# 3000 – Node backend / signaling
-# 5000 – Python API (optional)
+# 4. (Optional Python Services)
+pip install -r requirements.txt
+python app.py
